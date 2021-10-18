@@ -57,7 +57,7 @@
         <section class="hero">
             <div class="backdrop is-hidden" data-modal>
                 <div class="hero-modal">
-                    <button class="modal-close" data-modal-close>
+                    <button class="modal-close btn" data-modal-close>
                         <svg class="icon-close" width="18px" height="18px">
                             <use href="./images/icons.svg#icon-close">
                             </use>
@@ -89,7 +89,16 @@
                                 </use>
                             </svg>
                         </label>
-
+                        <label class="modal-label-textarea">
+                            <span class="modal-label-name">Комментарий</span>
+                            <textarea class="modal-textarea" name="comment" placeholder="Введите текст"></textarea>
+                        </label>
+                        <label class="modal-label-checkbox">
+                            <input class="modal-checkbox" type="checkbox" name="agreement">
+                            <div class="modal-checkbox-icon"></div>
+                            <span class="modal-checkbox-text">Соглашаюсь с рассылкой и принимаю <a class="modal-checkbox-link" href="">Условия договора</a></span>
+                        </label>
+                        <button class="modal-button-send btn" type="submit">Отправить</button>
                     </form>
                 </div>
             </div>

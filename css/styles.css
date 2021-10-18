@@ -261,14 +261,6 @@ img {
 }
 
 .hero-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  text-align: center;
-  letter-spacing: 0.06em;
-  color: #ffffff;
-  background-color: var(--accent-color);
-
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -277,6 +269,15 @@ img {
   padding-bottom: 10px;
   padding-right: 32px;
   padding-left: 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition-property: background-color;
   transition-duration: 250ms;
@@ -343,6 +344,10 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   color: var(--accent-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:focus,
@@ -369,6 +374,10 @@ img {
   margin-bottom: 10px;
 }
 
+.modal-label:focus-within {
+  fill: var(--accent-color);
+}
+
 .modal-label-name {
   display: block;
   margin-bottom: 4px;
@@ -390,10 +399,118 @@ img {
   border-radius: 4px;
 }
 
+.modal-input-text:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
 .modal-icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
+}
+
+.modal-label-textarea {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.modal-textarea {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 16px;
+  width: 448px;
+  height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+}
+
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.modal-label-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modal-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.modal-checkbox-icon {
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--secondary-title-color);
+  border-radius: 2px;
+}
+
+.modal-checkbox:checked + .modal-checkbox-icon {
+  background-origin: border-box;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-size: contain;
+}
+
+.modal-checkbox-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: var(--main-text-color);
+}
+
+.modal-checkbox-link {
+  color: var(--accent-color);
+}
+
+.modal-button-send {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 200px;
+  height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  background-color: var(--accent-color);
+  color: #ffffff;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-button-send:hover,
+.modal-button-send:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ----------ABOUT-US---------- */
@@ -679,13 +796,15 @@ img {
   width: 358px;
   height: 50px;
 
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
   color: #ffffff;
   background-color: var(--main-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 
 .footer-subscribe-field::placeholder {
@@ -709,11 +828,16 @@ img {
 
   color: #ffffff;
   background-color: var(--accent-color);
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-subscribe-button:hover,
 .footer-subscribe-button:focus {
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .footer-subscribe-icon {
